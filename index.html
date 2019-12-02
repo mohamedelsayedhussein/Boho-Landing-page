@@ -8,6 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Basic One Page Scroll Demo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 </head>
 
 <body>
@@ -31,31 +32,40 @@
 
   <div id="fullpage">
     <div id="hero"  class="section">
-        <div id="wrapper">
+        <div id="form-wrapper">
 
             <form name="login-form" class="login-form" action="" method="post">
             
               <div class="header">
-              <h1>Login Form</h1>
-              <span>Fill out the form below to login to my super awesome imaginary control panel.</span>
+                <h1>Contact Us</h1>
               </div>
             
               <div class="content">
-              <input name="username" type="text" class="input username" placeholder="Username" />
-              <div class="user-icon"></div>
-              <input name="password" type="password" class="input password" placeholder="Password" />
-              <div class="pass-icon"></div>		
+                <div class="form-group">
+                  <input type="text" class="input username" placeholder="Username" />
+                  <div class="user-icon animated-icon"><i class="far fa-user"></i></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="input email" placeholder="Email" />
+                  <div class="email-icon animated-icon"><i class="far fa-paper-plane"></i></i></div>		
+                </div>
+                <div class="form-group">
+                  <input type="text" class="input phone" placeholder="Phone" />
+                  <div class="phone-icon animated-icon"><i class="fas fa-mobile-alt"></i></div>
+                </div>
+                <div class="form-group">
+                  <textarea rows="3">I'm Interested In</textarea>
+                </div>
               </div>
           
               <div class="footer">
-              <input type="submit" name="submit" value="Login" class="button" />
-              <input type="submit" name="submit" value="Register" class="register" />
+                <input type="submit" name="submit" value="Login" class="button" />
+                <input type="submit" name="submit" value="Register" class="register" />
               </div>
             
             </form>
           
           </div>
-          <div class="gradient"></div>
           
       <div class="arrow-box">
         <div class="arrow"></div>
