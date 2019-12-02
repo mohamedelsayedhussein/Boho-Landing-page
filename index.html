@@ -6,22 +6,15 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <title>Basic One Page Scroll Demo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Boho</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Gruppo&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-
   <div id="nav-container">
-    <!-- mobile navigaation -->
-    <div id="nav">
-      <a id="link-hero"   href="#hero"  class="link"></a>
-      <a id="link-one"    href="#one"   class="link"></a>
-      <a id="link-two"    href="#two"   class="link"></a>
-      <a id="link-three"  href="#three" class="link"></a>
-    </div>
-    <!-- desktop navigaation -->
     <ul id="menu">
       <li data-menuanchor="firstPage"><a id="menu-hero" href="#firstPage"></a></li>
       <li data-menuanchor="secondPage"><a id="menu-one" href="#secondPage"></a></li>
@@ -29,7 +22,7 @@
       <li data-menuanchor="4thpage"><a id="menu-three" href="#4thpage"></a></li>
     </ul>
   </div>
-
+  
   <div id="fullpage">
     <div id="hero"  class="section">
         <div id="form-wrapper">
@@ -54,24 +47,36 @@
                   <div class="phone-icon animated-icon"><i class="fas fa-mobile-alt"></i></div>
                 </div>
                 <div class="form-group">
-                  <textarea rows="3">I'm Interested In</textarea>
+                  <textarea rows="3" placeholder="I'm Interested In"></textarea>
                 </div>
               </div>
           
               <div class="footer">
-                <input type="submit" name="submit" value="Login" class="button" />
-                <input type="submit" name="submit" value="Register" class="register" />
+                <input type="submit" name="submit" value="Send" class="button" />
               </div>
             
             </form>
           
           </div>
-          
       <div class="arrow-box">
         <div class="arrow"></div>
       </div>
     </div><!-- end hero -->
     <div id="one"   class="section">
+      	<div id="slider-main">
+            <div id="slider-item">
+              <img src="img/slider/slide1.jpg" alt="">
+              <img src="img/slider/slide2.jpg" alt="">
+              <img src="img/slider/slide3.jpg" alt="">
+              <img src="img/slider/slide4.jpg" alt="">
+              <img src="img/slider/slide5.jpg" alt="">
+              <img src="img/slider/slide6.jpg" alt="">
+              <img src="img/slider/slide7.jpg" alt="">
+        
+              <p>BeaPro</p>
+            </div>
+            <div id="ground"></div>
+          </div>
       <div class="arrow-box">
         <div class="arrow"></div>
       </div>
@@ -99,7 +104,8 @@
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js'></script>
-  <script src="app.js"></script>
+  <script src="js/3dslider.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 

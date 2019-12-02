@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    text-align: center;
-  }
+    font-family: 'Gruppo', cursive;
+}
 #hero .arrow-box { background: #2C3A47;}
 #hero .arrow { border-color: #1B9CFC transparent transparent transparent; }
 
@@ -28,9 +31,7 @@ body {
 }
 #menu li a {
   background: #f2f2f2;
-  box-sizing: border-box;
   display: block;
-  flex-direction: column;
   width: 11px;
   height: 11px;
   margin: 1.5em 0;
@@ -38,24 +39,10 @@ body {
   transition: all .4s cubic-bezier(0.71,-1.03, 0.26, 2.74);
 }
 
-#nav { display: none; }
-
-.link {
-  background: #f2f2f2;
-  box-sizing: border-box;
-  display: block;
-  color: #fff;
-  width: 11px;
-  height: 11px;
-  margin: 1.5em 0;
-  border-radius: 3px;
-  transition: all .4s cubic-bezier(0.71,-1.03, 0.26, 2.74);
-}
 .link-active {background-color: #fff;transform: scale(2);}
 
-@media screen and (max-width: 1024px) {
-  #nav { display: block; }
-  #menu { display: none; }
+@media (max-width: 767px) {
+  #nav-container { display: none; }
 }
 
 #fullpage {
@@ -63,10 +50,10 @@ body {
   width: 100%;
 }
 .section {  
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   height: 100vh;
   position: relative;
   width: 100%;
@@ -112,74 +99,59 @@ body {
 }
 
 /* ======================== form style ======================== */
-
+#hero {
+  background: url('../img/banner.jpg') center no-repeat;
+  background-size: cover;
+}
 #hero #form-wrapper {
   position: absolute;
   top: 50%;
-  right: 2rem;
+  right: 5%;
   transform: translateY(-50%);
 	width: 350px;
 }
 
 #hero #form-wrapper .login-form {
 	width: 100%;
-	position: relative;
-	
-	background: rgba(0,0,0,0.3);
-	border-radius: 5px;
-	
-	box-shadow: 5px 8px 10px rgba(0,0,0,0.2);
+	position: relative;	
+	background: #fff;
+	border-radius: 5px;	
+	box-shadow: 5px 8px 15px rgba(0,0,0,0.2);
 }
-
 #hero #form-wrapper .login-form .header {
 	padding: 1rem;
 }
-
 #hero #form-wrapper .login-form .header h1 {
-	font-weight: 300;
 	font-size: 28px;
-	line-height:34px;
 	color: #d8d8d8;
 	margin-bottom: 10px;
 }
-
 #hero #form-wrapper .login-form .content {
-	padding: 0 30px 25px 30px;
+	padding: 0 1rem;
 }
-
 #hero #form-wrapper .login-form .content .input,
 #hero #form-wrapper .login-form .content textarea {
 	width: 100%;
   padding: 15px 20px;
-  box-sizing: border-box;
 	font-weight: 400;
 	font-size: 14px;
-  color: #d8d8d8;
-  margin-bottom: 1rem;
-	
+  margin-bottom: 1rem;	
   background: none;
   border: none;
-	border-bottom: 1px solid #d8d8d8;  
+	border-bottom: 1px solid #aaaaaa;  
   outline: none;
 }
 
-/* Second input field */
-#hero #form-wrapper .login-form .content .password, .login-form .content .phone-icon {
-	margin-top: 25px;
-}
-
-#hero #form-wrapper .user-icon,
-#hero #form-wrapper .phone-icon,
-#hero #form-wrapper .email-icon   {
+#hero #form-wrapper .animated-icon   {
 	width: 45px;
   height: 45px;
   line-height: 45px;
+  text-align: center;
 	display: block;
 	position: absolute;
-	left: 0px;
-  padding-right: 2px;
-  background: rgba(255,255,255,.3);
-  border-radius: 5px;
+  left: 0px;
+  z-index: -1;
+  background: #fff;
 }
 
 #hero #form-wrapper .form-group {
@@ -188,35 +160,26 @@ body {
 
 #hero #form-wrapper .form-group .animated-icon {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 0;
   transform: translateY(-50%);
 }
 
 #hero #form-wrapper .content input:focus + div{
-  left: -46px;
+  left: -60px;
   opacity: 1;
 }
-
 #hero #form-wrapper .email-icon,
 #hero #form-wrapper .user-icon,
 #hero #form-wrapper .phone-icon {
-	transition: all 0.5s ease;
+	transition: all 0.3s cubic-bezier(0.36, -0.89, 0, 1.79);
 }
 
 #hero #form-wrapper .login-form .footer {
-	padding: 25px 30px 40px 30px;
-	overflow: auto;
-	
-	background: #d4dedf;
-	border-top: 1px solid #fff;
-	
-	box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	padding: 1rem;
 }
 
-/* Login button */
 #hero #form-wrapper .login-form .footer .button {
-	float:right;
 	padding: 11px 25px;
 	
 	font-weight: 300;
@@ -224,7 +187,7 @@ body {
 	color: #fff;
 	
 	background: #56c2e1;
-	border: 1px solid #46b3d3;
+	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 }
@@ -233,16 +196,83 @@ body {
 	background: #3f9db8;
 }
 
-#hero #form-wrapper .login-form .footer .register {
-	display: block;
-	float: right;
-	padding: 10px;
-	margin-right: 20px;
-	
-	background: none;
-	border: none;
-	cursor: pointer;
-	font-weight: 300;
-	font-size: 18px;
-	color: #414848;
+/* ===================== slider section style ======================= */
+#one {
+	background: #111;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+#slider-main,
+#slider-item {
+	position: relative;
+	display: flex;
+	margin: auto;
+	transform-style: preserve-3d;
+	transform: rotateX(-10deg);
+}
+
+#slider-main img {
+	transform-style: preserve-3d;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 200px;
+	font-size: 50px;
+	box-shadow: 0 0 8px 5px #111;
+	border-radius: 12px;
+	transition: all .2s linear;
+	box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+	-webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+	-moz-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+	-o-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+}
+
+#slider-main img:hover {
+	box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+	-webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+	-moz-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+	-o-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+
+#slider-main p {
+	font-family: Serif;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateX(90deg);
+	color: #fff;
+	font-size: 34px;
+}
+
+#ground {
+	width: 900px;
+	height: 900px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateX(90deg);
+	background: -webkit-radial-gradient(center center, farthest-side, #9993, transparent);
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes spinRevert {
+	from {
+		transform: rotateY(360deg);
+	}
+
+	to {
+		transform: rotateY(0deg);
+	}
 }

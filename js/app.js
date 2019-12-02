@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  
-      if ($(window).width() < 1024) {
+
+      if ($(window).width() < 767) {
         $('#fullpage').fullpage({
           autoScrolling: false,
           verticalCentered: false
         });
-        
+      }
         var heroLink    = $('#link-hero');
         var hero        = $('#hero');
         var oneLink     = $('#link-one');
@@ -36,59 +36,17 @@ $(document).ready(function() {
           }, 500)
         });
         
-      } else {
         $('#fullpage').fullpage({
           anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
           autoScrolling: true,
           verticalCentered: false
         });
-      }
 
       var controller = new ScrollMagic.Controller();
-      var mobileHero = new ScrollMagic.Scene({
-        triggerElement: '#hero',
-        duration: '100%',
-        triggerHook: 0,
-        reverse: true,
-      })
-      .setClassToggle('#link-hero', 'link-active')
-      // .addIndicators({
-      //   colorTrigger: 'black',
-      //   colorStart: '#000',
-      // })
-      .addTo(controller);
-      // one
-      var mobileOne = new ScrollMagic.Scene({
-        triggerElement: '#one',
-        duration: '100%',
-        triggerHook: 0,
-        reverse: true,
-      })
-      .setClassToggle('#link-one', 'link-active')
-      .addTo(controller);
-      // two
-      var mobileTwo = new ScrollMagic.Scene({
-        triggerElement: '#two',
-        duration: '100%',
-        triggerHook: 0,
-        reverse: true,
-      })
-      .setClassToggle('#link-two', 'link-active')
-      .addTo(controller);
-      // three
-      var mobileThree = new ScrollMagic.Scene({
-        triggerElement: '#three',
-        duration: '100%',
-        triggerHook: 0,
-        reverse: true,
-      })
-      .setClassToggle('#link-three', 'link-active')
-      .addTo(controller);
-      
       var desktopHero = new ScrollMagic.Scene({
         triggerElement: '#hero',
         duration: '100%',
-        triggerHook: 0,
+        triggerHook: .2,
         reverse: true,
       })
       .setClassToggle('#menu-hero', 'link-active')
@@ -97,7 +55,7 @@ $(document).ready(function() {
       var desktopOne = new ScrollMagic.Scene({
         triggerElement: '#one',
         duration: '100%',
-        triggerHook: 0,
+        triggerHook: .2,
         reverse: true,
       })
       .setClassToggle('#menu-one', 'link-active')
@@ -106,7 +64,7 @@ $(document).ready(function() {
       var desktopTwo = new ScrollMagic.Scene({
         triggerElement: '#two',
         duration: '100%',
-        triggerHook: 0,
+        triggerHook: 0.2,
         reverse: true,
       })
       .setClassToggle('#menu-two', 'link-active')
@@ -115,7 +73,7 @@ $(document).ready(function() {
       var desktopTwo = new ScrollMagic.Scene({
         triggerElement: '#three',
         duration: '100%',
-        triggerHook: 0,
+        triggerHook: 0.2,
         reverse: true,
       })
       .setClassToggle('#menu-three', 'link-active')
