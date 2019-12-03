@@ -7,7 +7,9 @@ var imgHeight = 200; //===========image height============
 
 
 // ===================== start =======================
-setTimeout(init, 100);
+
+
+    setTimeout(init, 100);
 
 var obox = document.getElementById('slider-main');
 var ospin = document.getElementById('slider-item');
@@ -17,10 +19,6 @@ var aEle = [...aImg, ...aVid];
 
 ospin.style.width = imgWidth + "px";
 ospin.style.height = imgHeight + "px";
-
-var ground = document.getElementById('ground');
-ground.style.width = radius * 3 + "px";
-ground.style.height = radius * 3 + "px";
 
 function init(delayTime) {
   for (var i = 0; i < aEle.length; i++) {
@@ -51,17 +49,11 @@ if (autoRotate) {
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
 
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay:false loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
-}
-
 if (mobilecheck()) {
   // ==================== Touch Events ====================
-  document.ontouchstart = function(e) {
+
+  var sectionOne = document.getElementById('one');
+  document.getElementById('one').ontouchstart = function(e) {
     clearInterval(obox.timer);
     e = e || window.event;
     var sX = e.touches[0].clientX,
@@ -100,7 +92,7 @@ if (mobilecheck()) {
   }
 } else {
   // ==================== Mouse Events ====================
-  document.onmousedown = function(e) {
+  document.getElementById('one').onmousedown = function(e) {
     clearInterval(obox.timer);
     e = e || window.event;
     var sX = e.clientX,
@@ -137,7 +129,7 @@ if (mobilecheck()) {
 
     return false;
   }
-  document.onmousewheel = function(e) {
+  document.getElementById('one').onmousewheel = function(e) {
     e = e || window.event;
     var d = e.wheelDelta / 20 || -e.detail;
     radius += d;

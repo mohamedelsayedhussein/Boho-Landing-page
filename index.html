@@ -9,8 +9,8 @@
   <title>Boho</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Gruppo&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 </head>
 
 <body>
@@ -35,12 +35,12 @@
             
               <div class="content">
                 <div class="form-group">
-                  <input type="text" class="input username" placeholder="Username" />
+                  <input type="text" class="input username" placeholder="Username" autofocus/>
                   <div class="user-icon animated-icon"><i class="far fa-user"></i></div>
                 </div>
                 <div class="form-group">
                   <input type="email" class="input email" placeholder="Email" />
-                  <div class="email-icon animated-icon"><i class="far fa-paper-plane"></i></i></div>		
+                  <div class="email-icon animated-icon"><i class="far fa-paper-plane"></i></div>		
                 </div>
                 <div class="form-group">
                   <input type="text" class="input phone" placeholder="Phone" />
@@ -48,6 +48,7 @@
                 </div>
                 <div class="form-group">
                   <textarea rows="3" placeholder="I'm Interested In"></textarea>
+                  <div class="message-icon animated-icon"><i class="far fa-comments"></i></div>
                 </div>
               </div>
           
@@ -58,41 +59,96 @@
             </form>
           
           </div>
-      <div class="arrow-box">
-        <div class="arrow"></div>
-      </div>
     </div><!-- end hero -->
     <div id="one"   class="section">
       	<div id="slider-main">
-            <div id="slider-item">
-              <img src="img/slider/slide1.jpg" alt="">
-              <img src="img/slider/slide2.jpg" alt="">
-              <img src="img/slider/slide3.jpg" alt="">
-              <img src="img/slider/slide4.jpg" alt="">
-              <img src="img/slider/slide5.jpg" alt="">
-              <img src="img/slider/slide6.jpg" alt="">
-              <img src="img/slider/slide7.jpg" alt="">
-        
-              <p>BeaPro</p>
-            </div>
-            <div id="ground"></div>
+          <div id="slider-item">
+            <img src="img/slider/slide1.jpg" alt="">
+            <img src="img/slider/slide2.jpg" alt="">
+            <img src="img/slider/slide3.jpg" alt="">
+            <img src="img/slider/slide4.jpg" alt="">
+            <img src="img/slider/slide5.jpg" alt="">
+            <img src="img/slider/slide6.jpg" alt="">
+            <img src="img/slider/slide7.jpg" alt="">
+      
+            <p>PHOTO GALLERY</p>
           </div>
+        </div>
       <div class="arrow-box">
         <div class="arrow"></div>
       </div>
     </div><!-- end one -->
     <div id="two"   class="section">
+      <div class="gallery-section">
+        <div class="img-gallery">
+          <img src="img/gallery1.jpg" alt="">
+          <h2 class="caption">Some Caption Here</h2>
+        </div>
+        <div class="img-gallery">
+          <img src="img/gallery2.jpg" alt="">
+          <h2 class="caption">Some Caption Here</h2>
+        </div>
+        <div class="img-gallery">
+          <img src="img/gallery3.jpg" alt="">
+          <h2 class="caption">Some Caption Here</h2>
+        </div>
+      </div>
       <div class="arrow-box">
         <div class="arrow"></div>
       </div>
     </div><!-- end two -->
-    <div id="three"  class="section">
-      <div class="three-text-wrapper">
-      </div>
-      <div id="footer">
-        <p>Copyright © 2019 Boho Elsokhna - All Rights Reserved</p>
+    <div id="three" class='section'>
+      <div class="slider-wrapper">
+        <div class="slider-area">
+            <div class="item">
+              <img src="img/slider/slide1.jpg" alt="">
+              <div class="caption">
+                <div class="details">
+                  <h5 class='title'>Title is Here</h3>
+                  <p class='desc'>New yourk, United States</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="img/slider/slide2.jpg" alt="">
+              <div class="caption">
+                <div class="details">
+                  <h5 class='title'>Title is Here</h3>
+                  <p class='desc'>New yourk, United States</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="img/slider/slide3.jpg" alt="">
+              <div class="caption">
+                <div class="details">
+                  <h5 class='title'>Title is Here</h3>
+                  <p class='desc'>New yourk, United States</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="img/slider/slide4.jpg" alt="">
+              <div class="caption">
+                <div class="details">
+                  <h5 class='title'>Title is Here</h3>
+                  <p class='desc'>New yourk, United States</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="img/slider/slide5.jpg" alt="">
+              <div class="caption">
+                <div class="details">
+                  <h5 class='title'>Title is Here</h3>
+                  <p class='desc'>New yourk, United States</p>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div><!-- end three -->
+    <footer class='section fp-auto-height'>Copyright © 2019 Boho Elsokhna - All Rights Reserved</footer>
   </div>
   
   </body>
@@ -104,6 +160,7 @@
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="js/3dslider.js"></script>
   <script src="js/app.js"></script>
 

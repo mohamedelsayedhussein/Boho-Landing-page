@@ -5,41 +5,12 @@ $(document).ready(function() {
           autoScrolling: false,
           verticalCentered: false
         });
-      }
-        var heroLink    = $('#link-hero');
-        var hero        = $('#hero');
-        var oneLink     = $('#link-one');
-        var one         = $('#one');
-        var twoLink     = $('#link-two');
-        var two         = $('#two');
-        var threeLink   = $('#link-three');
-        var three       = $('#three');
-    
-        heroLink.on('click', function(){
-            $('html, body').animate({
-            scrollTop: hero.offset().top
-          }, 500)
-        });
-        oneLink.on('click', function(){
-            $('html, body').animate({
-            scrollTop: one.offset().top
-          }, 500)
-        });
-        twoLink.on('click', function(){
-            $('html, body').animate({
-            scrollTop: two.offset().top
-          }, 500)
-        });
-        threeLink.on('click', function(){
-            $('html, body').animate({
-            scrollTop: three.offset().top
-          }, 500)
-        });
-        
+      }        
         $('#fullpage').fullpage({
-          anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+          anchors: ['firstPage', 'secondPage', '3rdPage','4thpage', 'lastPage'],
           autoScrolling: true,
-          verticalCentered: false
+          verticalCentered: false,
+          responsiveHeight: 100
         });
 
       var controller = new ScrollMagic.Controller();
@@ -81,22 +52,50 @@ $(document).ready(function() {
       
       var controller = new ScrollMagic.Controller();
         
-        var icon = $('.icon');
+        var imgGallery = $('.img-gallery');
       
-        var tl1 = new TimelineMax().add([
-            TweenMax.from(icon, 1, {y: 50, autoAlpha: 0, ease:Power1.easeOut})]);
-
+        var tl1 = new TimelineMax();
+            tl1.staggerFrom(imgGallery, .5, {cycle:{y:[120, -120]}, autoAlpha: 0, ease:Power1.easeOut}, .2)
         new ScrollMagic.Scene({
-                triggerElement: ('#one h1'),
+                triggerElement: ('#two'),
                 triggerHook: 0.5
               })
               .setTween(tl1)
               // .addIndicators({
-              //   name: 'icon',
+              //   name: 'imgGallery',
               //   colorTrigger: 'black',
               //   colorStart: 'cyan',
               //   colorEnd: 'purple'
               // })
               .addTo(controller);
       
+    });
+
+    // init slick slider
+    $('.slider-area').slick({
+      autoplay: true,
+      dots: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+      pauseOnHover: false,
+      prevArrow: '<button class="PrevArrow"></button>',
+      nextArrow: '<button class="NextArrow"></button>',
+      responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
     });
