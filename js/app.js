@@ -68,8 +68,11 @@ $(document).ready(function() {
               //   colorEnd: 'purple'
               // })
               .addTo(controller);
+
+        var tl2 = new TimelineMax();
+              var formWrapper = $('#form-wrapper')
+        tl2.from(formWrapper, .5 , {autoAlpha: 0, ease:Back.easeIn})
       
-    });
 
     // init slick slider
     $('.slider-area').slick({
@@ -99,3 +102,5 @@ $(document).ready(function() {
     }
   ]
     });
+
+});
